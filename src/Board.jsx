@@ -29,7 +29,7 @@ export function TicTacToeBoard({ ctx, G, moves }) {
       cells.push(
         <td key={id}>
           {G.cells[id] ? (
-            <div style={cellStyle}>{G.cells[id]}</div>
+            <div style={cellStyle}>{G.cells[id] === "0" ? "O" : "X"}</div>
           ) : (
             <button style={cellStyle} onClick={() => onClick(id)} />
           )}
